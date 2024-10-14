@@ -11,7 +11,7 @@ export default function App() {
           <div className="container flex items-center justify-between">
             <div className="w-[535px] space-y-[30px]">
               <div className="flex w-fit items-center space-x-[10px] rounded-full bg-[#F3F0F8] px-[22px] py-[10px]">
-                <img src="/cup.svg" alt="" />
+                <img src="/cup.svg" alt="" loading="lazy" />
                 <p>
                   <span className="text-sm font-bold text-primary">
                     12,000 {""}
@@ -97,14 +97,14 @@ export default function App() {
                 },
               ].map((item) => (
                 // item grid
-                <div className="flex h-[350px] flex-col justify-between rounded-2xl bg-white p-[30px] relative">
+                <div className="relative flex h-[350px] flex-col justify-between rounded-2xl bg-white p-[30px]">
                   {/* text */}
                   <div className="absolute left-[70px] top-12 aspect-square h-10 rounded-full bg-tertiary"></div>
 
                   <img
                     src={`/vuesax/linear/${item.icon}.svg`}
                     alt=""
-                    className="w-[70px] z-10"
+                    className="z-10 w-[70px]"
                   />
                   <div className="space-y-[10px]">
                     <h1 className="text-[22px] font-bold">{item.title}</h1>
