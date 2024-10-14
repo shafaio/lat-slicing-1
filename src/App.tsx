@@ -22,7 +22,7 @@ export default function App() {
               <h1 className="font-clash text-[65px] font-semibold">
                 Clients Analytics for Freelancer
               </h1>
-              <p className="text-lg">
+              <p className="text-lg leading-9">
                 Learn how to track the hot prospects to bring more fortune while
                 freelancing from home or your favorite cafes.
               </p>
@@ -55,7 +55,7 @@ export default function App() {
               {Array.from({ length: 2 }).map((_, index) => (
                 <div
                   key={index}
-                  className="animate-infinite-scroll flex shrink-0 justify-center gap-[70px]"
+                  className="flex shrink-0 animate-infinite-scroll justify-center gap-[70px]"
                 >
                   {[...logos, ...logos, ...logos, ...logos].map((item) => (
                     <img src={item} alt="" />
@@ -97,16 +97,20 @@ export default function App() {
                 },
               ].map((item) => (
                 // item grid
-                <div className="flex h-[350px] flex-col justify-between rounded-2xl bg-white p-[30px]">
+                <div className="flex h-[350px] flex-col justify-between rounded-2xl bg-white p-[30px] relative">
                   {/* text */}
+                  <div className="absolute left-[70px] top-12 aspect-square h-10 rounded-full bg-tertiary"></div>
+
                   <img
                     src={`/vuesax/linear/${item.icon}.svg`}
                     alt=""
-                    className="w-[70px]"
+                    className="w-[70px] z-10"
                   />
                   <div className="space-y-[10px]">
                     <h1 className="text-[22px] font-bold">{item.title}</h1>
-                    <p className="text-lg text-[#989AAE]">{item.subtitle}</p>
+                    <p className="text-lg leading-9 text-[#989AAE]">
+                      {item.subtitle}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -128,16 +132,19 @@ export default function App() {
                 },
               ].map((item) => (
                 // item grid
-                <div className="flex h-[350px] flex-col justify-between rounded-2xl bg-white p-[30px]">
+                <div className="relative flex h-[350px] flex-col justify-between rounded-2xl bg-white p-[30px]">
                   {/* text */}
+                  <div className="absolute left-[70px] top-12 aspect-square h-10 rounded-full bg-tertiary"></div>
                   <img
                     src={`/vuesax/linear/${item.icon}.svg`}
                     alt=""
-                    className="w-[70px]"
+                    className="z-10 w-[70px]"
                   />
                   <div className="space-y-[10px]">
                     <h1 className="text-[22px] font-bold">{item.title}</h1>
-                    <p className="text-lg text-[#989AAE]">{item.subtitle}</p>
+                    <p className="text-lg leading-9 text-[#989AAE]">
+                      {item.subtitle}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -147,7 +154,7 @@ export default function App() {
 
         <section className="container flex items-center justify-between">
           <div className="space-y-4">
-            <img src="/featured_video.jpg" alt="" />
+            <img src="/featured_video.jpg" alt="" className="max-w-[530px]" />
             <div className="flex justify-between">
               {Array.from({ length: 3 }).map((_, index) => (
                 <img
@@ -164,8 +171,10 @@ export default function App() {
               Built For Winners
             </button>
             <div className="space-y-[10px]">
-              <h1 className="text-4xl font-bold">Watch How It Works</h1>
-              <p className="text-lg">
+              <h1 className="text-4xl font-bold leading-[48px]">
+                Watch How It Works
+              </h1>
+              <p className="text-lg leading-9">
                 We designed a lot of features that can applied automatically so
                 you do not have to run.
               </p>
@@ -205,7 +214,7 @@ export default function App() {
         </section>
 
         <section className="bg-[#EDEEF2] py-[70px]">
-          <div className="container flex space-x-[30px]">
+          <div className="container flex justify-between space-x-[30px]">
             <div className="space-y-[30px]">
               <button className="rounded-full bg-tertiary px-[22px] py-[10px] text-sm font-bold">
                 Good Investment
@@ -348,7 +357,7 @@ export default function App() {
             ].map((item, index) => (
               <div
                 className={`flex h-[350px] flex-col justify-between rounded-[26px] p-[30px] ${
-                  index === 0 ? "shadow-custom bg-white" : null
+                  index === 0 ? "bg-white shadow-custom" : null
                 }`}
               >
                 <img src={item.image} alt="" width={70} />
