@@ -1,3 +1,4 @@
+import Marquee from "react-fast-marquee";
 import Footer from "./components/footer";
 import Navigation from "./components/nav";
 import { logos } from "./content";
@@ -40,7 +41,7 @@ export default function App() {
           </div>
 
           <div className="mt-[50px] space-y-[30px] text-black">
-            <p className="text-center font-semibold">
+            <p className="text-center font-semibold leading-[38px]">
               Over
               <span className="font-bold text-primary">
                 {""} 280,000 {""}
@@ -51,18 +52,13 @@ export default function App() {
               </span>
             </p>
 
-            <div className="flex gap-[70px] overflow-hidden">
-              {Array.from({ length: 2 }).map((_, index) => (
-                <div
-                  key={index}
-                  className="flex shrink-0 animate-infinite-scroll justify-center gap-[70px]"
-                >
-                  {[...logos, ...logos, ...logos, ...logos].map((item) => (
-                    <img src={item} alt="" />
-                  ))}
-                </div>
+            {/* <div className="flex gap-[70px] overflow-hidden"> */}
+            <Marquee className="gap-10" autoFill>
+              {[...logos, ...logos, ...logos].map((item) => (
+                <img className="mr-[70px]" src={item} alt="" />
               ))}
-            </div>
+            </Marquee>
+            {/* </div> */}
           </div>
         </section>
 
