@@ -27,7 +27,7 @@ export default {
         },
       },
       animation: {
-        "infinite-scroll": "infinite-scroll 20s linear infinite",
+        "infinite-scroll": "infinite-scroll 15s linear infinite",
       },
       boxShadow: {
         custom: "0 0 50px -2px rgba(5, 7, 41, 0.11)",

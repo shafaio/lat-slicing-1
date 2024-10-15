@@ -52,13 +52,25 @@ export default function App() {
               </span>
             </p>
 
-            {/* <div className="flex gap-[70px] overflow-hidden"> */}
-            <Marquee className="gap-10" autoFill>
+            {/* <div className="flex gap-[70px] overflow-hidden">
+              {Array.from({ length: 2 }).map((_, index) => (
+                <div
+                  key={index}
+                  className="flex shrink-0 animate-infinite-scroll justify-center gap-[70px]"
+                  style={{ width: "300%" }}
+                >
+                  {[...logos, ...logos, ...logos].map((item) => (
+                    <img src={item} alt="" />
+                  ))}
+                </div>
+              ))}
+            </div> */}
+
+            <Marquee speed={200}>
               {[...logos, ...logos, ...logos].map((item) => (
-                <img className="mr-[70px]" src={item} alt="" />
+                <img src={item} alt="" className="px-[35px]" />
               ))}
             </Marquee>
-            {/* </div> */}
           </div>
         </section>
 
