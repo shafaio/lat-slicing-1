@@ -219,7 +219,7 @@ export default function App() {
               <button className="rounded-full bg-tertiary px-[22px] py-[10px] text-sm font-bold">
                 Good Investment
               </button>
-              <h1 className="text-4xl font-bold">
+              <h1 className="text-4xl font-bold leading-[48px]">
                 Most Friendly Pricing <br /> Plans For Everyone
               </h1>
               <p className="text-lg leading-9">
