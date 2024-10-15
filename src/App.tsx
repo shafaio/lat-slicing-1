@@ -52,21 +52,7 @@ export default function App() {
               </span>
             </p>
 
-            {/* <div className="flex gap-[70px] overflow-hidden">
-              {Array.from({ length: 2 }).map((_, index) => (
-                <div
-                  key={index}
-                  className="flex shrink-0 animate-infinite-scroll justify-center gap-[70px]"
-                  style={{ width: "300%" }}
-                >
-                  {[...logos, ...logos, ...logos].map((item) => (
-                    <img src={item} alt="" />
-                  ))}
-                </div>
-              ))}
-            </div> */}
-
-            <Marquee speed={200}>
+            <Marquee speed={100}>
               {[...logos, ...logos, ...logos].map((item) => (
                 <img src={item} alt="" className="px-[35px]" />
               ))}
